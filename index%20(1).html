@@ -1,10 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-...
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LootPaat | Gaming & Entertainment</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:#080812;color:#fff;line-height:1.5}
+    a{text-decoration:none;color:inherit}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,8,18,.94);backdrop-filter:blur(12px);border-bottom:1px solid #24243a}
+    .nav{max-width:1200px;margin:auto;padding:16px 22px;display:flex;align-items:center;gap:28px}
+    .logo{font-size:25px;font-weight:800;color:#fff}
+    .logo span{color:#a855f7}
+    nav{display:flex;gap:22px;flex:1}
+    nav a{color:#b9b9c9;font-weight:600}
+    nav a:hover{color:#c084fc}
+    .search{background:#151525;border:1px solid #30304a;color:#fff;border-radius:10px;padding:10px 14px;width:220px;outline:none}
+    .hero{max-width:1200px;margin:25px auto 0;padding:0 22px}
+    .hero img{width:100%;height:420px;object-fit:cover;border-radius:20px;border:1px solid #343454;display:block}
+    .hero-content{margin-top:-155px;position:relative;padding:30px 45px;height:150px;background:linear-gradient(transparent,rgba(8,8,18,.9))}
+    .hero h1{font-size:42px}
+    .hero p{color:#c5c5d5;margin:6px 0 16px}
+    .btn{display:inline-block;background:#9333ea;padding:10px 20px;border-radius:9px;font-weight:700}
+    .btn:hover{background:#a855f7}
+    main{max-width:1200px;margin:50px auto;padding:0 22px}
+    section{margin-bottom:48px}
+    .section-title{font-size:28px;margin-bottom:18px}
+    .section-title span{color:#a855f7}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:#11111f;border:1px solid #27273d;border-radius:14px;overflow:hidden;transition:.25s}
+    .card:hover{transform:translateY(-5px);border-color:#9333ea;box-shadow:0 10px 30px rgba(147,51,234,.15)}
+    .thumb{height:155px;background:linear-gradient(135deg,#251044,#111827);display:flex;align-items:center;justify-content:center;font-size:52px}
+    .card-body{padding:15px}
+    .card h3{font-size:18px;margin-bottom:5px}
+    .card p{font-size:13px;color:#9e9eaf}
+    .tag{display:inline-block;margin-top:10px;font-size:11px;color:#c084fc;background:#24143b;padding:4px 8px;border-radius:20px}
+    .empty{display:none;text-align:center;color:#999;padding:30px}
+    footer{border-top:1px solid #24243a;text-align:center;color:#8f8f9e;padding:28px;margin-top:20px}
+    @media(max-width:850px){
+      nav{display:none}.search{width:160px;margin-left:auto}.grid{grid-template-columns:repeat(2,1fr)}
+      .hero img{height:330px}.hero h1{font-size:32px}
+    }
+    @media(max-width:520px){
+      .nav{padding:13px 15px}.logo{font-size:21px}.search{width:135px}
+      .hero{padding:0 12px}.hero img{height:270px}.hero-content{padding:25px 20px}
+      .hero h1{font-size:27px}.hero p{font-size:13px}
+      main{padding:0 12px}.grid{grid-template-columns:1fr}
+    }
+  </style>
 </head>
-
 <body>
-...
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#">loot<span>paat</span></a>
+    <nav>
+      <a href="#games">🎮 Games</a>
+      <a href="#movies">🎬 Movies</a>
+      <a href="#funny">😂 Funny</a>
+      <a href="#trending">🔥 Trending</a>
+    </nav>
+    <input class="search" id="search" type="search" placeholder="Search...">
+  </div>
+</header>
+
+<div class="hero">
+  <img src="gaming_website_hero (1).gif" alt="Gaming website hero banner">
+  <div class="hero-content">
+    <h1>Welcome to LootPaat 🎮</h1>
+    <p>Games, movies, funny content and everything entertaining in one place.</p>
+    <a class="btn" href="#games">Explore Now</a>
+  </div>
+</div>
+
+<main>
+  <section id="games">
+    <h2 class="section-title">🎮 <span>Games</span></h2>
+    <div class="grid">
+      <article class="card" data-name="Action Arena"><div class="thumb">⚔️</div><div class="card-body"><h3>Action Arena</h3><p>Fast-paced action and adventure.</p><span class="tag">GAME</span></div></article>
+      <article class="card" data-name="Racing Rush"><div class="thumb">🏎️</div><div class="card-body"><h3>Racing Rush</h3><p>Race your way to the top.</p><span class="tag">GAME</span></div></article>
+      <article class="card" data-name="Space Battle"><div class="thumb">🚀</div><div class="card-body"><h3>Space Battle</h3><p>Explore the galaxy and fight.</p><span class="tag">GAME</span></div></article>
+      <article class="card" data-name="Zombie Night"><div class="thumb">🧟</div><div class="card-body"><h3>Zombie Night</h3><p>Survive the ultimate night.</p><span class="tag">GAME</span></div></article>
+    </div>
+  </section>
+
+  <section id="movies">
+    <h2 class="section-title">🎬 <span>Movies</span></h2>
+    <div class="grid">
+      <article class="card" data-name="Movie Night"><div class="thumb">🍿</div><div class="card-body"><h3>Movie Night</h3><p>Discover something great to watch.</p><span class="tag">MOVIE</span></div></article>
+      <article class="card" data-name="Action Movies"><div class="thumb">💥</div><div class="card-body"><h3>Action Picks</h3><p>High-energy movie recommendations.</p><span class="tag">MOVIE</span></div></article>
+      <article class="card" data-name="Sci Fi"><div class="thumb">👽</div><div class="card-body"><h3>Sci-Fi Zone</h3><p>Future worlds and epic stories.</p><span class="tag">MOVIE</span></div></article>
+      <article class="card" data-name="Comedy"><div class="thumb">🤣</div><div class="card-body"><h3>Comedy Picks</h3><p>For a fun movie night.</p><span class="tag">MOVIE</span></div></article>
+    </div>
+  </section>
+
+  <section id="funny">
+    <h2 class="section-title">😂 <span>Funny Content</span></h2>
+    <div class="grid">
+      <article class="card" data-name="Funny Clips"><div class="thumb">😂</div><div class="card-body"><h3>Funny Clips</h3><p>Short content for a quick laugh.</p><span class="tag">FUNNY</span></div></article>
+      <article class="card" data-name="Gaming Memes"><div class="thumb">🎮😂</div><div class="card-body"><h3>Gaming Memes</h3><p>Relatable gamer moments.</p><span class="tag">MEMES</span></div></article>
+      <article class="card" data-name="Fails"><div class="thumb">🤦</div><div class="card-body"><h3>Epic Fails</h3><p>When everything goes wrong.</p><span class="tag">FUNNY</span></div></article>
+      <article class="card" data-name="Memes"><div class="thumb">🔥</div><div class="card-body"><h3>Daily Memes</h3><p>Fresh entertainment every day.</p><span class="tag">MEMES</span></div></article>
+    </div>
+  </section>
+
+  <section id="trending">
+    <h2 class="section-title">🔥 <span>Trending</span></h2>
+    <div class="grid">
+      <article class="card" data-name="Trending Game"><div class="thumb">🏆</div><div class="card-body"><h3>Trending Game</h3><p>What's hot in gaming right now.</p><span class="tag">TRENDING</span></div></article>
+      <article class="card" data-name="Popular Video"><div class="thumb">▶️</div><div class="card-body"><h3>Popular Video</h3><p>Content everyone is talking about.</p><span class="tag">TRENDING</span></div></article>
+      <article class="card" data-name="New Release"><div class="thumb">✨</div><div class="card-body"><h3>New Release</h3><p>Check out the latest releases.</p><span class="tag">NEW</span></div></article>
+      <article class="card" data-name="Top Pick"><div class="thumb">👑</div><div class="card-body"><h3>Top Pick</h3><p>Our featured entertainment pick.</p><span class="tag">TOP</span></div></article>
+    </div>
+  </section>
+
+  <div class="empty" id="empty">No results found.</div>
+</main>
+
+<footer>© 2026 LootPaat — Gaming & Entertainment</footer>
+
+<script>
+  const search = document.getElementById('search');
+  const cards = [...document.querySelectorAll('.card')];
+  const sections = [...document.querySelectorAll('section')];
+  const empty = document.getElementById('empty');
+
+  search.addEventListener('input', () => {
+    const q = search.value.toLowerCase().trim();
+    let found = 0;
+    cards.forEach(card => {
+      const match = card.dataset.name.toLowerCase().includes(q) || card.innerText.toLowerCase().includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) found++;
+    });
+    sections.forEach(section => {
+      const visible = [...section.querySelectorAll('.card')].some(c => c.style.display !== 'none');
+      section.style.display = visible ? '' : 'none';
+    });
+    empty.style.display = found ? 'none' : 'block';
+  });
+</script>
 </body>
 </html>
